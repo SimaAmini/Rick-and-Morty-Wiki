@@ -1,13 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    padding: 0em 2em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 40em) {
+    .card {
+        max-width: calc(50% - 1em);
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .card {
+        max-width: calc(25% - 1em);
+    }
+}
+
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 52em;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul {
+    list-style: none;
+}
+.logo-container {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards-header {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 1em;
+}
+.card {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #706f6f;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem 0.25em;
+}
+.card:hover {
+    box-shadow: 1px 1px 7px black;
+}
+.card-img img {
+    width: 100%;
+}
+/* details */
+.detail-layout {
+    display: flex;
+}
+.information {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+/* pagination */
+.pagination {
+    display: flex;
+    width: min-content;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 5px #3d3d3da6;
+    -moz-box-shadow: 1px 1px 5px #3d3d3da6;
+    box-shadow: 1px 1px 5px #3d3d3da6;
+}
+.pagination button {
+    padding: 1em 2em;
+    border: none;
+    background-color: #fff;
+    color: black;
+}
+
+.pagination button:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.pagination button:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.pagination button:hover {
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+.pagination button:disabled {
+    cursor: not-allowed;
+    background-color: #c4c2c2;
+    color: gray;
+}
+.pagination .active-page {
+    background-color: black;
+    color: white;
+}
+
+/* common classes */
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.pointer {
+    cursor: pointer;
+}
+.more {
+    color: gray;
+    vertical-align: middle;
 }
